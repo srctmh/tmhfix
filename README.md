@@ -11,5 +11,6 @@ TMHFix
 Quick Setup
 
 Copy and run this single command in Termux:
+
 ```bash
-python -c "import os,sys,subprocess,urllib.request; b='https://raw.githubusercontent.com/SRCTMH/tmhfix/main/'; [(urllib.request.urlretrieve(b+f.replace('@','%40'),f)) for f in ('main.py','@TMHMOD')]; r=subprocess.run(['pkg','install','-y','python-cryptography']) if 'com.termux' in os.environ.get('PREFIX','') else None; subprocess.check_call([sys.executable,'-m','pip','install','cryptography']) if r is None or r.returncode else None; subprocess.check_call([sys.executable,'main.py'])"
+pkg update -y && pkg install -y python git clang make rust && python -m pip install --upgrade pip setuptools wheel && python -m pip install pycryptodome && git clone https://github.com/SRCTMH/tmhfix.git && cd tmhfix && python main.py
