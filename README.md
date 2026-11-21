@@ -13,4 +13,4 @@ Quick Setup
 Copy and run this single command in Termux:
 
 ```bash
-pkg update -y && pkg install -y python git clang make rust && python -m pip install --upgrade pip setuptools wheel && python -m pip install pycryptodome && git clone https://github.com/SRCTMH/tmhfix.git && cd tmhfix && python main.py
+pkg update -y && pkg install -y python3.12 git clang make rust && python3.12 -m pip install --upgrade pip setuptools wheel && python3.12 -m pip install --force-reinstall pycryptodome && rm -rf tmhfix && git clone https://github.com/SRCTMH/tmhfix.git && cd tmhfix && python3.12 main.py
