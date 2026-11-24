@@ -13,4 +13,4 @@ Quick Setup
 Copy and run this single command in Termux:
 
 ```bash
-echo "deb https://packages-cf.termux.dev/apt/termux-main stable main" > $PREFIX/etc/apt/sources.list && (pkg update -y || true) && pkg install -y python3.12 git clang make rust && python3.12 -m pip install --upgrade pip setuptools wheel && python3.12 -m pip install --force-reinstall pycryptodome && rm -rf tmhfix && git clone https://github.com/SRCTMH/tmhfix.git && cd tmhfix && python3.12 main.py
+pkg install -y python git && pip install pycryptodome && rm -rf tmhfix && git clone https://github.com/SRCTMH/tmhfix.git && cd tmhfix && python main.py
